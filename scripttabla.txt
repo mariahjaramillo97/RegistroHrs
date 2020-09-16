@@ -1,0 +1,18 @@
+-- Table: public.registrohrs
+
+-- DROP TABLE public.registrohrs;
+
+CREATE TABLE public.registrohrs
+(
+    id integer NOT NULL DEFAULT nextval('registrohrs_id_seq'::regclass),
+    idtecnico character varying(100) COLLATE pg_catalog."default",
+    idservicio character varying(100) COLLATE pg_catalog."default",
+    fechainicio character varying(80) COLLATE pg_catalog."default",
+    fechafin character varying(80) COLLATE pg_catalog."default",
+    CONSTRAINT registrohrs_pk PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.registrohrs
+    OWNER to postgres;
